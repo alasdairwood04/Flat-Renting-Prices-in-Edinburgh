@@ -10,3 +10,7 @@ This project scrapes rental prices from a property website in Edinburgh to help 
 - `tests/`: Directory for unit tests.
 - `requirements.txt`: List of dependencies.
 - `README.md`: Project documentation.
+
+### Current State
+Currently, this only goes through the first page of the website https://www.citylets.co.uk/flats-rent-edinburgh/ however I am planning on updating the code so that it will
+scrap through all of the pages of the website
