@@ -5,8 +5,9 @@ def main():
     url = "https://www.citylets.co.uk/flats-rent-edinburgh/"
     scraper = Scraper(url)
     
-    html = scraper.fetch_data()  # Fetch raw HTML data
-    
+
+
+    html = scraper.fetch_data(url)  # Fetch raw HTML data
     
     flats = scraper.parse_data(html)  # Parse the raw HTML into BeautifulSoup object
     
