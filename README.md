@@ -12,5 +12,4 @@ This project scrapes rental prices from a property website in Edinburgh to help 
 - `README.md`: Project documentation.
 
 ### Current State
-Currently, this only goes through the first page of the website https://www.citylets.co.uk/flats-rent-edinburgh/ however I am planning on updating the code so that it will
-scrap through all of the pages of the website
+Scrapes all the pages of the website and puts all the flats for rent in an excel file. Aiming to improve the functinality to allow the user to input certain criteria e.g. number of rooms, HMO etc. 
