@@ -7,11 +7,12 @@ class ExcelWriter:
         excel = openpyxl.Workbook()
         sheet = excel.active
         sheet.title = "Flats to rent in Edinburgh"
-        sheet.append(["Number", "Address", "Postcode", "Rent", "No of Bedrooms", "Estage Agent"])
+        sheet.append(["Number", "Area", "Address", "Postcode", "Rent", "No of Bedrooms", "Estage Agent"])
 
         for flat in flats:
             sheet.append([
                 flat["number"],
+                flat["area"],
                 flat["address"],
                 flat["postcode"],
                 flat["rent"],

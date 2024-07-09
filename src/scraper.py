@@ -44,8 +44,15 @@ class Scraper:
                     postcode = flat.find("span", itemprop="postalCode").get_text(strip=True)
                     estate_agent = flat.find("a", class_="listing-contact-agent").get_text(strip=True)
                     
+                    comma_index = address.find(',')
+                    if comma_index != -1:
+                        area = address[comma_index + 1:].strip()
+                    else:
+                        area = ""
+
                     each_flat = {
                         "number": count,
+                        "area": area,
                         "address": address,
                         "postcode": postcode,
                         "rent": rent_per_month,
