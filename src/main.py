@@ -1,7 +1,7 @@
-
 from scraper import Scraper
 from create_excel import ExcelWriter
 from clean_data import Cleaner
+from data_analysis import DataAnalyzer
 
 def main():
     url = "https://www.citylets.co.uk/flats-rent-edinburgh/"
@@ -24,6 +24,8 @@ def main():
     writer = ExcelWriter()
     writer.write_to_excel(cleaned_flats_data)
 
+    create_charts = DataAnalyzer()
+    create_charts.plot_rent_per_room_for_3_bedrooms_vs_area(cleaned_flats_data)
 
 
 if __name__ == "__main__":
