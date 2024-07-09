@@ -39,10 +39,10 @@ class Scraper:
                 if listing_details is not None:
                     count += 1
                     rent_per_month = listing_details.find('span', {'class': 'rent', 'itemscope': True, 'itemtype': 'http://schema.org/SellAction'}).get_text(strip=True)
-                    no_of_bedrooms = listing_details.find("div", itemprop="name").get_text(strip=True)[:1]
+                    no_of_bedrooms = listing_details.find("div", itemprop="name").get_text(strip=True)
                     address = flat.find("span", itemprop="streetAddress").get_text(strip=True)
                     postcode = flat.find("span", itemprop="postalCode").get_text(strip=True)
-                    estate_agent = flat.find("a", class_="listing-contact-agent").get_text(strip=True)[7:]
+                    estate_agent = flat.find("a", class_="listing-contact-agent").get_text(strip=True)
                     
                     each_flat = {
                         "number": count,
