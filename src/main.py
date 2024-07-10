@@ -25,7 +25,7 @@ def main():
     writer.write_to_excel(cleaned_flats_data)
 
     create_charts = DataAnalyzer()
-    create_charts.plot_rent_per_room_for_3_bedrooms_vs_area(cleaned_flats_data)
+    create_charts.draw_graphs(cleaned_flats_data)
 
 
 if __name__ == "__main__":

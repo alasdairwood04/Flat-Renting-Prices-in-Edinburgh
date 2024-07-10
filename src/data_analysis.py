@@ -96,3 +96,5 @@ class DataAnalyzer:
         self.draw_distribution(data)  # Correctly calling the instance method
         self.plot_rooms_vs_rent(data)  # Correctly calling the instance method
         self.plot_rent_per_room_vs_area(data)
+        self.plot_rent_per_room_for_4_bedrooms_vs_area(data)
+        self.plot_rent_per_room_for_3_bedrooms_vs_area(data)
