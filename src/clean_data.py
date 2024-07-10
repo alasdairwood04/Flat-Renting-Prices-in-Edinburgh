@@ -14,6 +14,8 @@ class Cleaner:
         # Clean No of Bedrooms column (extract numeric part)
         df['no_of_rooms'] = df['no_of_rooms'].str.extract(r'(\d+)').astype(int)
         
+        # Get the numeric part of the postcode
+        df["postcode"] = df["postcode"].str.extract(r"(\d+)").astype(int)
         
         # Extract last word from Address and create Area column
         df['Area'] = df['address'].str.split().str[-1]
