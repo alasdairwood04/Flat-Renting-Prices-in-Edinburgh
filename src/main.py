@@ -25,7 +25,7 @@ def main():
     writer = ExcelWriter()
     writer.write_to_excel(cleaned_flats_data)
 
-
+    '''
     predictor = RentPredictor()
 
     X_train, X_test, y_train, y_test = predictor.prepare_data(cleaned_flats_data_df)
@@ -33,14 +33,13 @@ def main():
     model = predictor.train_model(X_train, y_train)
     predictor.evaluate_model(model, X_test, y_test)
 
-    new_data = pd.DataFrame([[9, 4]], columns=["postcode", "no_of_rooms"])  # Example new data with postcode and number of rooms
+    new_data = pd.DataFrame([[16, 3]], columns=["postcode", "no_of_rooms"])  # Example new data with postcode and number of rooms
     predicted_rent = predictor.predict_rent(model, new_data)
     print("Predicted rent:", predicted_rent)
 
-
+    '''
     create_charts = DataAnalyzer()
     create_charts.draw_graphs(cleaned_flats_data)
-
 
 if __name__ == "__main__":
     main()

@@ -9,13 +9,13 @@ class Cleaner:
         df['address'] = df['address'].str.split(',').str[0]
         
         # Clean Rent column (extract numeric part)
-        df['rent'] = df['rent'].str.extract(r'(\d+)').astype(int)
+        df['rent'] = df['rent'].str.extract(r'(\d+)').astype(float)
         
         # Clean No of Bedrooms column (extract numeric part)
-        df['no_of_rooms'] = df['no_of_rooms'].str.extract(r'(\d+)').astype(int)
+        df['no_of_rooms'] = df['no_of_rooms'].str.extract(r'(\d+)').astype(float)
         
         # Get the numeric part of the postcode
-        df["postcode"] = df["postcode"].str.extract(r"(\d+)").astype(int)
+        df["postcode"] = df["postcode"].str.extract(r"(\d+)").astype(float)
         
         # Extract last word from Address and create Area column
         df['Area'] = df['address'].str.split().str[-1]
