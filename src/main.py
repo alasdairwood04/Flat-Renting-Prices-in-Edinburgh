@@ -41,7 +41,6 @@ def main():
     create_charts = DataAnalyzer()
     create_charts.draw_graphs(cleaned_flats_data)
 
-    print("Hello world")
 if __name__ == "__main__":
     main()
 
